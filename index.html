@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&family=Outfit:wght@300;400;600&family=Orbitron:wght@700&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <canvas id="space"></canvas>
+
+  <nav class="navbar">
+    <span class="nav-brand">AEJ</span>
+    <ul class="nav-links">
+      <li><a class="nav-link" data-page="0" data-state="1">About</a></li>
+      <li><a class="nav-link" data-page="1">Education</a></li>
+      <li><a class="nav-link" data-page="2">Projects</a></li>
+      <li><a class="nav-link" data-page="3">Skills</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-indicators" id="pageIndicators">
+    <button class="dot active" data-page="0"></button>
+    <button class="dot" data-page="1"></button>
+    <button class="dot" data-page="2"></button>
+    <button class="dot" data-page="3"></button>
+  </div>
+
+  <div class="pages-container" id="pagesContainer">
+
+    <!-- PAGE 0: Hero + About -->
+    <div class="page" id="page-0">
+      <div class="hero-view">
+        <div class="hero-photo-wrapper" id="heroPhoto">
+          <div class="orbit-ring"></div>
+          <div class="orbit-dot"></div>
+          <div class="profile-container">
+            <img src="assets/profile.jpg" alt="Akhila Elizabeth Jose">
+          </div>
+        </div>
+        <div class="content-panel">
+          <!-- State A: intro -->
+          <div class="state-a" id="stateA">
+            <h1 class="hero-name">Akhila Elizabeth Jose</h1>
+            <h2>Aerospace Engineer | Space Systems &amp; Electric Propulsion</h2>
+            <p class="scroll-hint">scroll to explore ↓</p>
+          </div>
+          <!-- State B: about (glassmorphism card) -->
+          <div class="state-b" id="stateB">
+            <div class="about-glass-card">
+              <h3 class="about-heading">ABOUT ME</h3>
+              <p class="about-p">Hi! I'm an aerospace engineer specialized in space propulsion, with a Master's
+                degree
+                in Space Engineering from the University of Pisa. I focus on electric propulsion systems,
+                particularly
+                iodine-fed Hall thrusters, and work on numerical simulations to study thermal dissociation,
+                discharge
+                stability, and thruster–power system interactions using MATLAB-based models.</p>
+              <p class="about-p">My goal is to contribute to advanced propulsion technologies that expand the
+                possibilities of space exploration.</p>
+              <p class="about-p">Alongside engineering, I have a strong interest in art and illustration. I enjoy
+                exploring the intersection of science and visual thinking, and this creative perspective supports a
+                more
+                flexible and thoughtful approach to problem-solving.</p>
+              <div class="resume-link-wrap">
+                <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-text-link">View my
+                  Resume</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 1: Education — Rocket Timeline -->
+    <div class="page" id="page-1">
+      <div class="page-content">
+        <h2 class="page-title centered">EDUCATION</h2>
+        <div class="edu-layout">
+          <!-- Left side: Rail + Boxes grouped together -->
+          <div class="edu-main-left">
+            <div class="edu-rail">
+              <div class="rail-line"></div>
+              <div class="timeline-dot" data-stage="0"></div>
+              <div class="timeline-dot" data-stage="1"></div>
+              <div class="timeline-dot" data-stage="2"></div>
+              <div class="timeline-dot" data-stage="3"></div>
+              <canvas id="rocketCanvas"></canvas>
+            </div>
+
+            <div class="edu-stages">
+              <div class="stage-box clickable" data-modal="stage-0">
+                <span class="stage-label">STAGE 00 · LAUNCH PAD</span>
+                <h3>High School</h3>
+                <span class="click-hint">(click to expand)</span>
+              </div>
+              <div class="stage-box clickable" data-modal="stage-1">
+                <span class="stage-label">STAGE 01 · BOOSTER SEPARATION</span>
+                <h3>Bachelor's Degree</h3>
+                <span class="click-hint">(click to expand)</span>
+              </div>
+              <div class="stage-box clickable" data-modal="stage-2">
+                <span class="stage-label">STAGE 02 · SECOND STAGE</span>
+                <h3>Internships</h3>
+                <span class="click-hint">(click to expand)</span>
+              </div>
+              <div class="stage-box clickable" data-modal="stage-3">
+                <span class="stage-label">STAGE 03 · ORBIT ACHIEVED ✦</span>
+                <h3>Master's Degree</h3>
+                <span class="click-hint">(click to expand)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right side: Illustration -->
+          <div class="edu-illustration">
+            <img src="assets/education_journey.jpeg" alt="Education Journey Illustration">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 2: Projects -->
+    <div class="page" id="page-2">
+      <div class="page-content">
+        <h2 class="page-title centered">PROJECTS</h2>
+        <div class="proj-grid">
+          <div class="proj-card clickable" data-modal="proj-hall">
+            <span class="proj-tag">MATLAB · Propulsion</span>
+            <h3>Iodine Hall Thruster Simulation</h3>
+            <p>Analysis of Thermal Dissociation's impact on performance parameters of an Iodine Hall Thruster.</p>
+            <span class="proj-cta">View details →</span>
+          </div>
+          <div class="proj-card clickable" data-modal="proj-vega">
+            <span class="proj-tag">ANSYS · FEM</span>
+            <h3>Vega Stage 3 Analysis</h3>
+            <p>Structural integrity and vibration analysis of launch vehicle upper stage components.</p>
+            <span class="proj-cta">View details →</span>
+          </div>
+          <div class="proj-card clickable" data-modal="proj-argo">
+            <span class="proj-tag">Systems Engineering</span>
+            <h3>Io Mission - ARGO</h3>
+            <p>Conceptual design of a scientific mission to Jupiter's moon Io: from payload to plumes.</p>
+            <span class="proj-cta">View details →</span>
+          </div>
+          <div class="proj-card clickable" data-modal="proj-composites">
+            <span class="proj-tag">Research · Lead</span>
+            <h3>Self-Healing Composites</h3>
+            <p>Experimental research on intrinsic self-healing for aerospace structural durability.</p>
+            <span class="proj-cta">View details →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 3: Skills -->
+    <div class="page" id="page-3">
+      <div class="page-content skills-page">
+        <h2 class="page-title centered">SKILLS & TOOLS</h2>
+        <p class="page-subtitle centered">TECHNICAL PROFICIENCY · LANGUAGES </p>
+
+        <div class="skills-rows">
+          <!-- Engineering Row -->
+          <div class="skill-row">
+            <div class="category-header">
+              <span class="icon">⚙️</span>
+              <h3>Engineering Software</h3>
+            </div>
+            <div class="skill-row-items">
+              <div class="mini-card"><i class="devicon-canjs-original colored"></i><span>CATIA V5</span></div>
+              <div class="mini-card"><i class="devicon-solidworks-plain colored"></i><span>SolidWorks</span></div>
+              <div class="mini-card"><i class="devicon-ansible-plain colored"></i><span>ANSYS FEM</span></div>
+              <div class="mini-card"><i class="devicon-apache-plain colored"></i><span>ANSYS CFD</span></div>
+              <div class="mini-card"><i class="devicon-googlecloud-plain colored"></i><span>STK / AGI</span></div>
+              <div class="mini-card"><i class="devicon-autotools-plain colored"></i><span>AutoCAD</span></div>
+              <div class="mini-card"><i class="devicon-embeddedc-plain colored"></i><span>GMAT</span></div>
+              <div class="mini-card"><i class="devicon-matlab-plain colored"></i><span>Simulink</span></div>
+            </div>
+          </div>
+
+          <!-- Coding Row -->
+          <div class="skill-row">
+            <div class="category-header">
+              <span class="icon">💻</span>
+              <h3>Coding & Scripting</h3>
+            </div>
+            <div class="skill-row-items">
+              <div class="mini-card"><i class="devicon-matlab-plain colored"></i><span>MATLAB</span></div>
+              <div class="mini-card"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+              <div class="mini-card"><i class="devicon-latex-original"></i><span>LaTeX</span></div>
+              <div class="mini-card"><i class="devicon-c-plain colored"></i><span>C</span></div>
+              <div class="mini-card"><i class="devicon-cplusplus-plain colored"></i><span>C++</span></div>
+            </div>
+          </div>
+
+          <!-- Productivity Row -->
+          <div class="skill-row">
+            <div class="category-header">
+              <span class="icon">🗂️</span>
+              <h3>General & Productivity Softwares</h3>
+            </div>
+            <div class="skill-row-items">
+              <div class="mini-card"><i class="devicon-microsoftoffice-plain colored"></i><span>MS Office</span></div>
+              <div class="mini-card"><i class="devicon-google-plain colored"></i><span>Workspace</span></div>
+              <div class="mini-card"><i class="devicon-azuresqldatabase-plain colored"></i><span>Notion</span></div>
+              <div class="mini-card"><i class="devicon-slack-plain colored"></i><span>Teams</span></div>
+            </div>
+          </div>
+
+          <!-- Languages section alone at bottom for space -->
+          <div class="skill-category-small language-box-compact">
+            <div class="category-header"><span class="icon">🌐</span>
+              <h3>Languages</h3>
+            </div>
+            <div class="lang-grid-mini">
+              <div class="lang-tag">🇬🇧 English (C2)</div>
+              <div class="lang-tag">🇮🇳 Hindi (Native)</div>
+              <div class="lang-tag">🇮🇳 Malayalam (Native)</div>
+              <div class="lang-tag">🇮🇹 Italian (A2)</div>
+              <div class="lang-tag">🇩🇪 German (A1)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Centered Connect & Teaser -->
+        <div class="connect-footer-wrap">
+          <div class="connect-panel">
+            <h4>Connect with me</h4>
+            <div class="connect-links">
+              <a href="https://www.linkedin.com/in/akhilaej" target="_blank" rel="noopener noreferrer"
+                title="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
+              <a href="https://github.com/akhilaej" target="_blank" rel="noopener noreferrer" title="GitHub"><i
+                  class="devicon-github-original"></i></a>
+              <a href="mailto:Akhilaej@gmail.com" title="Email me"><i class="devicon-google-plain"></i></a>
+            </div>
+            <p class="art-teaser">✦ Wanna see my artistic side? ✦ <a href="#" target="_blank">@doodlepebble</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-note">
+          <p>Akhila Elizabeth Jose · Aerospace Engineer · Electric Propulsion & Space Systems</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-inner" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
