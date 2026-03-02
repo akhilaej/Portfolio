@@ -937,7 +937,7 @@ const modalData = {
 
 <div class="modal-gallery-grid" style="margin-top: 10px; margin-bottom: 25px; overflow: hidden;">
   <div class="gallery-item">
-    <img src="assets/Cetpa1.png" alt="Fan Stage Design">
+    <img src="assets/cetpa1.png" alt="Fan Stage Design">
     <div class="gallery-caption">Fan Stage Design · CATIA V5</div>
   </div>
   <div class="gallery-item">
@@ -1449,7 +1449,7 @@ const modalData = {
 <h4 class="modal-section-subtitle">SELF-HEALING MECHANISM – HOLLOW FIBER COMPOSITES</h4>
 <div class="modal-gallery-grid">
   <div class="gallery-item fit">
-    <img src="assets/SH1.jpg" alt="Hollow Fiber Healing Mechanism">
+    <img src="assets/Sh1.jpg" alt="Hollow Fiber Healing Mechanism">
     <div class="gallery-caption">Hollow fiber extrinsic healing · Crack plane · Healing agent release</div>
   </div>
 </div>
@@ -1457,19 +1457,19 @@ const modalData = {
 <h4 class="modal-section-subtitle">LAB DOCUMENTATION</h4>
 <div class="modal-gallery-quad">
   <div class="gallery-item">
-    <img src="assets/SH2.jpeg" alt="Sandwich Composite Block">
+    <img src="assets/Sh2.jpeg" alt="Sandwich Composite Block">
     <div class="gallery-caption">Sandwich composite block</div>
   </div>
   <div class="gallery-item">
-    <img src="assets/SH3.jpeg" alt="Healed Spectrum Crack Cross Section">
+    <img src="assets/Sh3.jpeg" alt="Healed Spectrum Crack Cross Section">
     <div class="gallery-caption">Healed spectrum crack cross section</div>
   </div>
   <div class="gallery-item">
-    <img src="assets/SH4.jpeg" alt="Three-Point Bend Test">
+    <img src="assets/Sh4.jpeg" alt="Three-Point Bend Test">
     <div class="gallery-caption">Three-point bend test · Damage induction</div>
   </div>
   <div class="gallery-item">
-    <img src="assets/SH5.jpeg" alt="Compression Test">
+    <img src="assets/Sh5.jpeg" alt="Compression Test">
     <div class="gallery-caption">Compression test · Healing agent extrusion</div>
   </div>
 </div>
